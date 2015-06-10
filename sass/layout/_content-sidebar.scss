@@ -1,0 +1,148 @@
+.site-content {
+    padding-bottom: 2em;
+    background: #b2b2b2 url(images/pattern.svg) repeat;
+    width: 100%;
+    max-width: 1232px;
+    margin: 0 auto;
+}
+.page .site-content {
+    padding-bottom: 2em;
+    // background: #b2b2b2 url(images/pattern.svg) repeat;
+    background: #fff;
+}
+.single .site-content { 
+    background: #fff; 
+    background: hsl(0, 0%, 100%);
+}
+
+.site-content .widget-area {
+	width: 380px;
+	float: right;
+	padding: 2rem;
+	background: #fff;
+}
+
+.site-footer {
+	clear: both;
+	width: $size__site-main;
+}
+.post,
+.page-header,
+.entry-header,
+.entry-content,
+.entry-summary,
+.entry-footer,
+.tag-links,
+.post-navitation,
+.comments-area,
+.paging-navigation {
+	position: relative;
+	max-width: 580px;
+	max-width: 58rem;
+	padding: 0 4rem;
+	margin: 0 auto;
+}
+
+
+
+@media screen and (max-width: 500px) {
+	.post,
+	.page-header,
+	.entry-header,
+	.entry-content,
+	.entry-summary,
+	.entry-footer,
+	.tag-links,
+	.post-navitation,
+	.comments-area,
+	.paging-navigation {
+		padding: 0 2rem;
+	}
+	.entry-content p,
+	.entry-content ul,
+	.entry-content ol {
+		line-height: 2em;
+	}
+}
+
+
+.post,
+.page-header {
+	// float: right;
+	// text-align: left;
+	margin-right: 0;
+	padding-top: 1em;
+	padding-bottom: 2em;
+	padding-left: 0;
+	padding-right: 0;
+	margin-bottom: 1em;
+	list-style-type: none;
+	background: #fff;
+}
+@media screen and (max-width: 1159px) {
+	.post,
+	.page-header {
+		margin-right: auto;
+	}
+}
+
+.index-box {
+	position: relative;
+    max-width: 580px;
+    max-width: 58rem;
+    padding: 1em 0 2em;
+    margin: 0 auto 2em;
+    background: #fff;
+    background: hsl(0, 0%, 100%);
+    // border-bottom: 1px solid #ccc;
+}
+
+.index-box blockquote.alignleft,
+.index-box blockquote.alignright {
+    background: #fff;
+    background: hsl(0, 0%, 100%);
+    border: none;
+}
+.continue-reading {
+    margin: 0;
+    font-weight: 700;
+    font-size: 10px;
+    font-size: 1rem;
+}
+
+.continue-reading i { margin-left: .5em; }
+
+@media screen and (min-width: 1820px) {
+    .index-box blockquote.alignright { padding-right: 2em; }
+}
+
+@media screen and (min-width: 1320px) {
+    .index-box blockquote.alignleft { padding-left: 2em; }
+}
+
+@media screen and (min-width: 1160px) {
+	.content-area {
+		width: 100%;
+		float: left;
+		margin-left: -380px;
+		padding-left: 380px;
+	}
+	.entry-header,
+	.entry-content,
+	.entry-footer,
+	.tag-links,
+	.post-navitation,
+	.comments-area,
+	.paging-navigation, 
+	.index-box {
+		margin-right: 0;
+	}
+}
+@media screen and (max-width: 1159px) {
+	.site-content .widget-area {
+		width: auto;
+		max-width: 780px;
+		float: none;
+		margin: 1em auto 0 auto;
+	}
+}

@@ -1,0 +1,129 @@
+.widget {
+	margin: 0 0 4em;
+	font-family: 'Lato', sans-serif;
+	font-size: 10px;
+	font-size: 1rem;
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+}
+.widget-title {
+	margin-bottom: 1em;
+	font-size: 16px;
+	font-size: 1.6rem;
+	border-bottom: 2px solid #757575;
+}
+
+.widget a {
+	font-weight: 700;
+	color: #000;
+}
+.widget ul,
+.widget ol {
+    padding: 0;
+    margin: -1em 0 0;
+    list-style-type: none;
+}
+
+.widget li { padding: 1em 0 0; }
+
+.widget li ul,
+.widget li ol { margin-top: 0; }
+
+.widget li li { margin-left: 1.5em; }
+
+.widget_pages li:before,
+.widget_recent_entries li:before,
+.widget_recent_comments li:before,
+.widget_archive li:before {
+    display: block;
+    float: left;
+    padding-top: 2px;
+    margin-left: -2.5em;
+    font-family: 'fontawesome';
+    font-size: 10px;
+    font-size: 1rem;
+} 
+.widget_pages li:before {
+    padding-top: 10px;
+    padding-top: 1rem;
+}
+.widget_recent_entries li,
+.widget_recent_comments li { margin: 0 0 .5em 2.5em; }
+
+.widget_recent_entries li:before { content: "\f036"; }
+.widget_recent_comments li:before { content: "\f075"; }
+
+.widget_archive li { margin: 0 0 0 2.5em; }
+.widget_archive li:before { content: "\f187"; }
+
+.widget_pages li { margin: 0 0 0 2.5em; }
+.widget_pages li:before { content: "\f108"; }
+
+.widget_nav_menu a,
+.widget_pages a {
+    display: block;
+    padding: 1em 0;
+    border-bottom: solid 1px hsl(0, 0%, 90%);
+}
+
+.widget_nav_menu li,
+.widget_pages li { padding-top: 0; }
+
+.widget_rss li { margin-bottom: .5em; }
+
+.widget_rss .rss-date,
+.widget_rss cite {
+    display: block;
+    font-size: 85%;
+}
+
+/* Make sure select elements fit in widgets */
+.widget select {
+	max-width: 100%;
+}
+
+/* Search widget */
+.widget_search .search-submit {
+	display: none;
+}
+
+.footer-widgets { margin: 0 auto; }
+
+.footer-widgets .widget-title,
+.footer-widgets .widget a:hover {
+    color: #fff;
+    color: hsl(0, 0%, 100%);
+    border-color: #fff;
+    border-color: hsl(0, 0%, 100%);
+}
+
+.footer-widgets .widget {
+    float: left;
+    width: 320px;
+    margin: 0 2rem 8rem 2rem;
+}
+
+.textwidget > p {
+    margin: 1em 0;
+    padding: .5em 1em;
+    border-left: 5px solid #7a2121;
+    background-color: #ececec; 
+    color: #193e5e;
+    border-radius: .3em;
+}
+
+
+
+/* Footer widgets responsive */
+@media screen and (max-width: 879px) {
+    #footer-widgets { width: 100%!important; }
+    
+    .footer-widgets .widget {
+        float: none;
+        width: 100%;
+        margin: 0 0 8rem;
+    }
+}

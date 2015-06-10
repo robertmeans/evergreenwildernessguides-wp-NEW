@@ -1,0 +1,54 @@
+
+
+/* new styles from lynda.com course (Underscores) - just pasted them here to overwrite the ones above
+widhtout deleting the ones above in case I want to look at them later. */
+.gallery-caption {
+	display: block;
+}
+
+.wp-caption .wp-caption-text ,
+.gallery-caption {
+    padding: 0.8075em 1em;
+    font-size: 10px;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    background: #e5e5e5;
+    background: hsl(0, 0%, 90%);
+}
+.site-main .gallery {
+	margin-bottom: 1.5em;
+}
+.site-main .gallery-item {
+    position: relative;    
+    max-width:100%;
+    float: left;
+    margin-right: 1%;
+    margin-bottom: 1rem;
+    background: #333;
+    overflow: hidden;
+}
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-height: 50%;
+    width: 100%;
+    padding: 6px 8px;
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #fff;
+    text-align: left;
+    background-color: hsla(0, 0%, 0%, .8);
+    opacity: 0;
+}
+.gallery-item:hover .gallery-caption { 
+    opacity: 1; 
+}
+.site-main .gallery a img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: none;
+}

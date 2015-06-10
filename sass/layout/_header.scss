@@ -1,0 +1,144 @@
+.header-image img {
+    display: block;
+    margin: 0 auto;
+}
+
+.header-background-image {
+    background: no-repeat center;
+    background-size: cover!important;
+    -moz-background-size: cover!important;
+    -webkit-background-size: cover!important;
+}
+
+.header-background-image .title-box {
+    background: #333;
+    background: hsla(0, 0%, 0%, .7);
+}
+// .flexslider {
+//     position: relative;
+// } 
+#rapelling-logo {
+    width: 100%;
+    max-width: 1232px;
+    position: relative;
+    margin: 0 auto;
+    z-index: 8888;
+}
+.rapelling-logo {
+    position: absolute;
+    width: 300px;
+    height: 275px;
+    top: 5px;
+    right: 10px;
+}
+@media screen and (max-width: 930px) {    
+.rapelling-logo {
+    width: 250px;
+    height: 229px;
+}
+}
+
+@media screen and (max-width: 730px) {
+.slider-sm-screen {
+    display: none;
+}
+#rapelling-logo {
+    height: 280px;
+    background: #dcd2c5;
+    background: url('http://www.evergreenwildernessguides.com/wp-build/wp-content/themes/ewg/images/logo-bkg.jpg') no-repeat;
+}
+.rapelling-logo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    top: auto;
+    right: auto;
+    left: 50%;
+    margin-left: -138px;
+    overflow: hidden;
+}
+}
+@media screen and (max-width: 480px) {
+    #rapelling-logo {
+    height: 230px;
+}
+.rapelling-logo {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    top: auto;
+    right: auto;
+    left: 50%;
+    margin-left: -125px;
+    overflow: hidden;
+}
+}
+@media screen and (max-width: 380px) {
+    #rapelling-logo {
+    height: 190px;
+}
+.rapelling-logo {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    top: auto;
+    right: auto;
+    left: 50%;
+    margin-left: -100px;
+    overflow: hidden;
+}
+}
+.site-branding {
+    padding: 6rem 0;
+    text-align: center;
+    background: #2c86ba;
+    background: hsl(202, 62%, 45%);
+}
+.title-box {
+    width: 600px;
+    max-width: 75%;
+    padding: 4rem;
+    margin: 0 auto;
+    border: solid 1px #fff;
+    border: solid 1px hsla(0, 0%, 100%, .3);
+}
+
+.site-title {
+    font-weight: 700;
+    font-size: 20px;
+    font-size: 2rem;
+    // text-transform: uppercase;
+    line-height: normal;
+    padding-bottom: 1rem;
+}
+
+.site-description {
+    font-weight: 100;
+    font-size: 20px;
+    font-size: 2rem;
+}
+
+.site-title a,
+.site-description { 
+    color: #fff;
+    color: hsl(0, 0%, 100%);
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+/* Header search */
+
+/* Header responsive */
+@media screen and (max-width: 930px) {
+    .site-branding { 
+        padding: 0; 
+    }
+    
+    .title-box {
+        max-width: 100%;
+        margin: 0;
+        padding: 4rem;
+        border: none;
+    }
+}
