@@ -1,5 +1,5 @@
 $color__background-body: #fff;
-$color__background-screen: #fff;
+$color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
 $color__background-button: #e6e6e6;
 $color__background-pre: #eee;
@@ -8,14 +8,80 @@ $color__background-ins: #fff9c0;
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: #09619e;
-$color__link-visited: #527191;
-$color__link-hover: #09619e;
-$color__text-main: #1d1d1d;
-$color__heading: #313131;
+$color__link: royalblue;
+$color__link-visited: green;
+$color__link-hover: midnightblue;
+$color__text-main: #757575;
+$color__heading-main: #4d4d4d;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
+
+
+/* --------- Original Styles --------- */
+// Primary Menu 
+$color__main-nav: #1d2157;
+$color__main-nav-hover: #686b96;
+$color__main-nav-current-page-bkg: #fff;
+$color__main-nav-current-page-txt: #1d2157;
+$color__main-nav-current-page-ancestor: #686b96;
+$color__main-nav-dropdown: rgba(81, 89, 107, .9);
+$color__main-nav-dropdown-hover: rgb(123, 121, 143);
+$color__dropdown-current-page-ancestor-bkg: #1d2157;
+$color__dropdown-current-page-ancestor-txt: #fff;
+// small screen nav
+$color__menu-toggle: #1d2157;
+$color__menu-toggle-border: #1d2157;
+$color__menu-toggle-hover: #686b96;
+$color__small-menu-item: #1d2157;
+$color__small-menu-hover: #686b96;
+$color__small-menu-current-page-bkg: #686b96;
+$color__small-menu-current-page-txt: #fff;
+$color__small-menu-current-page-parent-bkg: inherit;
+$color__small-menu-current-page-parent-txt: inherit;
+$color__small-menu-item-ancestor-hover: #1d2157;
+$color__small-menu-current-page-ancestor: inherit;
+
+// search
+$color__search-box: #686b96;
+$color__search-toggle-hover: #686b96;
+
+// widgets
+$color__widget-title: #fff;
+$color__widget-title-border-bottom-color: #fff;
+$color__widget-link: #000;
+
+// comments
+$color__comment-by-post-author-bkg: #ededed;
+
+// widgets
+$color__recent-entries-fontawesome-icon: inherit;
+$color__archive-fontawesome-icon: inherit;
+$color__comments-fontawesome-icon: inherit;
+$color__pages-fontawesome-icon: inherit;
+
+// calendar
+$color__calendar-days-of-week-bkg: #4d4d4d;
+$color__calendar-days-of-week-txt: #fff;
+$color__calendar-empty-day-pad-bkg: #6e6e6e;
+$color__calendar-odd-days-bkg: #ccc;
+$color__calendar-even-days-bkg: #e1e1e1;
+$color__calendar-day-txt: inherit;
+
+$color__calendar-dates-that-contain-posts-link: red;
+
+$color__calendar-footer-bkg: #313131;
+$color__calendar-footer-month-bkg: #313131;
+$color__calendar-footer-month-txt: #fff;
+$color__calendar-footer-month-bkg-hover: #fefefe;
+$color__calendar-footer-month-txt-hover: #313131;
+
+// footer
+$color__footer-bkg: #574b1d;
+$color__footer-txt: #fff;
+
+
+

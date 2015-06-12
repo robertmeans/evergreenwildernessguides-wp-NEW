@@ -1,7 +1,19 @@
+div.nav-bkg {
+	position: relative;
+	float: left;
+	height: 2.3em;
+	background: #7384d9;
+	width: 100%;
+	max-width: 1232px;
+	left: 50%;
+	margin-left: -616px;	
+}
 .main-navigation {
 	position: relative;
-	font-family: 'Lato', sans-serif;
+	// font-family: 'Lato', sans-serif;
+	font-family: sans-serif;
 	background: #1d2157;
+	border-top: .1em solid #e3e430;
 	clear: both;
 	display: block;
 	float: left;
@@ -9,26 +21,49 @@
 	max-width: 1232px;
 	left: 50%;
 	margin-left: -616px;
-	height: 3rem;
+	height: 2em;
 	// margin: 0 auto;
-	cursor: pointer;
-	z-index: 99998;
+	z-index: 9998;
 
 	ul {
 		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		height: 2.3em;
+		// background: #1d2157;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			// box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
 			position: absolute;
-			top: 3em;
-			left: -999em;
-			z-index: 99999;
+			// top: 2em;
+			margin-top: 0.3em;
+			// left: -999em;
+
+			opacity: 1;
+
+			z-index: 10001;
 			padding: 0;
-			background: #4d4d4d;
+			background: #5257a4;
+			background: rgba(29,33,87,.1);
+
+			.current_page_item > a,
+			.current-menu-item > a,
+			.current_page_item > a:hover,
+			.current-menu_item > a:hover {
+				background: #5257a4;
+				color: #fff;
+				height: 3em;
+			}
+
+
+
+
+
+
+
+
 
 			ul {
 				left: -999em;
@@ -38,13 +73,21 @@
 			li {
 				&:hover > ul,
 				&.focus > ul {
-					left: 100%;
+					// left: 100%;
+					opacity: 1;
 				}
-			}
+			}		
 
 			a {
-				width: 295px;
+				width: 300px;
+				border-bottom: 1px solid #fff;
+				height: 3em;
+				line-height: 3em;
+
 			}
+			li:last-child a {
+				border-bottom: 0;
+			}	
 
 			:hover > a,
 			.focus > a {
@@ -53,7 +96,7 @@
 
 			a:hover,
 			a.focus {
-				background: #4d4d4d;
+				background: #5257a4;
 				// wtf is this? ^^^ <------------------------------------- see this
 				// small screen menu goes behind search results
 			}
@@ -68,21 +111,22 @@
 		float: left;
 		position: relative;
 		background: #1d2157;
+		background: rgba(29,33,87,.9);
 
 		&:hover > a,
 		&.focus > a {
 			color: #fff;
-			background: #4d4d4d;
+			background: #5257a4;
 		}
 	}
-	a {
+	a { // see below for stand alone padding on top level anchors
 		display: block;
-		padding: .75em 1.5em;
-		font-size: 10px;
-		font-size: 1rem;
+		padding: 0 2em 2em 2em;
+		font-size: 14px;
 		text-decoration: none;
-		// line-height: 1.3em;
+		line-height: 2em;
 		color: #fff;
+		height: 2em;
 	}
 
 	.current_page_item > a,
@@ -91,6 +135,7 @@
 	.current-menu_item > a:hover {
 		background: #fff;
 		color: #1d2157;
+		height: 2.6em;
 	}
 	.current_page_parent {
 		.current_page_item > a {
@@ -100,7 +145,7 @@
 	}
 
 	.current-menu-ancestor {
-		background: #4d4d4d;
+		background: #5257a4;
 	}
 }
 
@@ -109,44 +154,18 @@
 
 /* this simply turns on and off the appropriate navigation.
 style both navigations outside this query - ? */
-@media screen and (min-width: 931px) {
+@media screen and (min-width: 930px) {
 	.menu-toggle {
 		display: none;
 	}
 	.main-navigation ul {
 		display: block;
 	}
-
+	// control height of top-level navigation within the nav bar (on hover)
+	.main-navigation > div > ul > li > a {
+		padding: 0 2em 2.2em 2em;
+    }
 }
-
-/* - original css
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
-
-	.site-main & {
-		position: relative;
-		// margin: 0 auto 1.5em auto;
-		max-width: 580px;
-		max-width: 58rem;
-		padding: 0 4rem;
-		margin-right: 0;
-		margin-bottom: 2rem;
-		// overflow: hidden;
-	}
-
-	& .nav-previous {
-		float: left;
-		width: 50%;
-	}
-
-	& .nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
-	}
-}
-*/
 
 
 .site-main .comment-navigation,
@@ -171,7 +190,7 @@ style both navigations outside this query - ? */
         width: 50%;	
         float: right;
         padding-left: 15%;
-	text-align: right;
+		text-align: right;
 }
 
 .nav-indicator { 
@@ -209,12 +228,13 @@ style both navigations outside this query - ? */
 .comment-navigation i {
     margin: 0 1em;
 }
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 929px) {
 	.menu-toggle {
             display: block;
-            height: 3.75em;
+            height: 3em;
             width: 100%;
             text-align: left;
+            font-family: 'Lato', sans-serif;
             // padding: 0 1em;
             font-size: 10px;
             font-size: 1rem;
@@ -233,7 +253,7 @@ style both navigations outside this query - ? */
 				outline: 0;
 				border: none;
 				box-shadow: none;
-				background: #4d4d4d;
+				background: #1d2157;
 				text-shadow: none;
 		}
 	}
@@ -243,20 +263,24 @@ style both navigations outside this query - ? */
 		box-shadow: none;
 		border-top: 1px solid;
 		border-top-color: #fff;
-		border-top-color: hsla(0, 0%, 100%, .5);
 	}
 
 	.main-navigation ul {
             display: none;
             padding-left: 0;
+			height: auto;
 	}
         .main-navigation li { 
 		float: none; 
 	}
 
+
 	.main-navigation li a { 
-		padding: 1.3em 2em; 
+		padding: 0 2em; 
+
+		height: 2.3em;
 	}
+
 
 	.main-navigation li li a { 
 		padding-left: 4em; 
@@ -268,7 +292,6 @@ style both navigations outside this query - ? */
 
 	.main-navigation li:hover > a {
 		background: #313131;
-		background: hsl(0, 0%, 19%);
 	}
 	
 	.main-navigation ul ul,
@@ -276,18 +299,25 @@ style both navigations outside this query - ? */
 		position: relative;
 		top: inherit;
 		left: 0;
+
 		display: block;
 		float: none;
+
 		background: #313131;
-		background: hsl(0, 0%, 19%);
+
+		a {
+			border-bottom: 0;
+			// height: 3em;
+			}
+
 	}
-	
+
+
 	.main-navigation ul ul a { width: 100%; }
 
 	.main-navigation ul a:hover,
 	.main-navigation ul ul a:hover {
 		background: #4d4d4d;
-		background: hsl(0, 0%, 30%);
 	}
 
 	.main-navigation .current_page_ancestor { background: inherit; }
@@ -302,18 +332,214 @@ style both navigations outside this query - ? */
 	.main-navigation .current_page_item li:hover,
 	.main-navigation .current_page_parent .current_page_item > a  {
 		color: #fff;
-		color: hsl(0, 0%, 100%);
-		background: #4d4d4d;
-		background: hsl(0, 0%, 30%);    
+		background: #4d4d4d;    
 	}
 }
 
 
 /* custom styles to keep menu centered */
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1249px) { // 1232 - 17 (for scroll bar) = 1249... 
+										// there never won't be a scroll bar.
+div.nav-bkg {
+	width: 100%;
+	max-width: 1232px;	
+	margin: 0 auto;
+	left: auto;
+}
 .main-navigation {
 	max-width: 1232px;
 	left: 0;
 	margin: 0;
 	}
+}
+
+
+/* Social Menu */
+
+.menu-social ul {
+    float: right;
+    position: relative;
+    margin-right: 0;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    list-style: none; 
+    top: -2.3em;
+}
+
+.menu-social li a {
+    position: relative;
+    display:  inline-block; 
+    background: inherit;
+    padding: 0;
+    &:hover {
+    	background: #686b96;
+    }   
+}
+
+.menu-social li a:before {
+    display: inline-block;
+    padding: 0;
+    vertical-align: top;
+    font-family: 'Fontawesome';
+    font-size: 14px;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    // content: '\f0c0';
+}
+
+/* social media */
+.menu-social li a[href*="facebook.com"]::before { 
+	content: '\f082';
+	font-size: 1.5em; 
+}
+
+.menu-social li a[href*="twitter.com"]::before { 
+	content: '\f099';
+	font-size: 1.5em; 
+}
+
+.menu-social li a[href*="dribbble.com"]::before { 
+	content: '\f17d';
+	font-size: 1.5em; 
+}
+
+.menu-social li a[href*="plus.google.com"]::before { 
+	content: '\f0d5';
+	font-size: 1.5em; 
+}
+
+.menu-social li a[href*="pinterest.com"]::before { 
+	content: '\f0d2';
+	font-size: 1.5em; 
+}
+
+.menu-social li a[href*="github.com"]::before { 
+	content: '\f09b';
+	font-size: 1.5em; 
+}
+
+.menu-social li a[href*="tumblr.com"]::before { 
+	content: '\f173';
+	font-size: 1.5em; 
+}
+
+.menu-social li a[href*="youtube.com"]::before { 
+	content: '\f167';
+	font-size: 1.5em; 
+}
+
+.menu-social li a[href*="flickr.com"]::before { 
+	content: '\f16e';
+	font-size: 1.5em; 
+}
+
+.menu-social li a[href*="vimeo.com"]::before { 
+	content: '\f194';
+	font-size: 1.5em; 
+}
+
+.menu-social li a[href*="instagram.com"]::before { 
+	content: '\f16d';
+	font-size: 1.5em; 
+}
+
+.menu-social li a[href*="linkedin.com"]::before { 
+	content: '\f0e1';
+	font-size: 1.5em; 
+}
+
+
+#menu-social li a { 
+    // width: 36px; 
+    padding-left: 1em;
+    padding-right: 1em;
+} 
+@media screen and (max-width: 929px) {
+    #menu-social ul {
+        position: absolute;
+        top: 0;
+        right: 5.05em;
+        display: inline-block;
+    }
+    
+    #menu-social li a { 
+        width: 4em;
+        height: 3.4em;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: .5em;
+    } 
+}
+
+
+
+
+// search
+
+input[type="search"] {
+    box-sizing: border-box;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.search-box-wrapper {
+    z-index: 2;
+    width: 100%;
+    display: none;
+    max-width: 1232px;
+    margin: 2.3em auto 0 auto;
+}
+
+.search-box {
+    padding: 0.5em;
+    background: $color__search-box;
+}
+
+.search-box .search-field {
+    max-width: 300px;
+    float: right;
+    padding: 5px 15px 5px 20px;
+    font-size: 16px;
+    background-color: #fff;
+    border: 0;
+}
+
+.error404 .search-submit,
+.search .search-submit,
+.search-box .search-submit { 
+    display: none; 
+}
+
+.search-toggle {
+    float: right;
+    position: relative;
+    width: 3em;
+    height: 1.95em;
+    padding-top: 4px;
+    margin-right: 20px;
+    top: -2.3em;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.search-toggle:hover,
+.search-toggle.active {
+    background: $color__search-toggle-hover;
+}
+
+@media screen and (max-width: 929px) {
+    .search-toggle {
+        position: absolute;
+        width: 3em;
+        height: 3em;
+        padding-top: .5em;
+        top: 0;
+        right: 2em;
+        margin-right: 0;
+    }
+    .search-box-wrapper {
+        margin: 3em auto 0 auto;
+    }    
 }

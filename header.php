@@ -31,8 +31,9 @@
 		?> <!-- flexslider -->
 		</div>
 
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'evergreenwildernessguides' ); ?></button>
+		<div class="nav-bkg">
+			<nav id="site-navigation" class="main-navigation nav-bkg" role="navigation">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars"></i> <?php esc_html_e( 'Menu', 'evergreenwildernessguides' ); ?></button>
 
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 				<div class="search-toggle">
@@ -42,6 +43,7 @@
 				<?php evergreenwildernessguides_social_menu(); ?>
 
 			</nav><!-- #site-navigation -->
+		</div><!-- .nav-bkg -->
 
 		<div id="search-container" class="search-box-wrapper clear">
 			<div class="search-box clear">

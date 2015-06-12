@@ -1,5 +1,5 @@
 .widget {
-	margin: 0 0 4em;
+	margin: 0 0 2em;
 	font-family: 'Lato', sans-serif;
 	font-size: 10px;
 	font-size: 1rem;
@@ -11,14 +11,18 @@
 }
 .widget-title {
 	margin-bottom: 1em;
-	font-size: 16px;
 	font-size: 1.6rem;
-	border-bottom: 2px solid #757575;
+    color: $color__widget-title;
+	border-bottom: 2px solid $color__widget-title-border-bottom-color;
 }
 
 .widget a {
 	font-weight: 700;
-	color: #000;
+	color: $color__widget-link;
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }
 }
 .widget ul,
 .widget ol {
@@ -53,14 +57,26 @@
 .widget_recent_entries li,
 .widget_recent_comments li { margin: 0 0 .5em 2.5em; }
 
-.widget_recent_entries li:before { content: "\f036"; }
-.widget_recent_comments li:before { content: "\f075"; }
+.widget_recent_entries li:before { 
+    content: "\f036";
+    color: $color__recent-entries-fontawesome-icon; 
+}
+.widget_recent_comments li:before { 
+    content: "\f075";
+    color: $color__comments-fontawesome-icon; 
+}
 
 .widget_archive li { margin: 0 0 0 2.5em; }
-.widget_archive li:before { content: "\f187"; }
+.widget_archive li:before { 
+    content: "\f187"; 
+    color: $color__archive-fontawesome-icon;
+}
 
 .widget_pages li { margin: 0 0 0 2.5em; }
-.widget_pages li:before { content: "\f108"; }
+.widget_pages li:before { 
+    content: "\f108";
+    color: $color__pages-fontawesome-icon; 
+}
 
 .widget_nav_menu a,
 .widget_pages a {
@@ -95,15 +111,13 @@
 .footer-widgets .widget-title,
 .footer-widgets .widget a:hover {
     color: #fff;
-    color: hsl(0, 0%, 100%);
     border-color: #fff;
-    border-color: hsl(0, 0%, 100%);
 }
 
 .footer-widgets .widget {
     float: left;
     width: 320px;
-    margin: 0 2rem 8rem 2rem;
+    margin: 0 2rem 2rem 2rem;
 }
 
 .textwidget > p {
@@ -114,6 +128,189 @@
     color: #193e5e;
     border-radius: .3em;
 }
+
+
+// Calendar 
+#calendar_wrap {
+    text-align: center;
+    color: $color__calendar-day-txt;
+}
+thead { // header of calendar
+    background: $color__calendar-days-of-week-bkg;
+    color: $color__calendar-days-of-week-txt;
+    // tr th:first-child { // rounded top left
+    //     border-top-left-radius: 8px;
+    // }
+    // tr th:last-child { // rounded top right
+    //     border-top-right-radius: 8px;
+    // }
+}
+
+tbody tr td { // Days
+    &:nth-child(odd) { // odd days
+        background: $color__calendar-odd-days-bkg;
+    }   
+    &:nth-child(2n) { // even days
+        background: $color__calendar-even-days-bkg;
+    } 
+}
+// keep the background consistent for the column
+// regardless of whether it begins on even or 
+// odd number of days into calendar 
+tbody tr:nth-child(1) { // top row - (1st week)
+    td:nth-child(2n) { // every 2nd cell, dark gray
+        background: $color__calendar-odd-days-bkg;
+    } 
+
+    td ~ td:nth-child(even) { // if no pad, even=light gray
+        background: $color__calendar-even-days-bkg;
+    }
+
+    td[colspan="1"] ~ td:nth-child(even) { // if pad=1, even=light gray
+        background: $color__calendar-even-days-bkg;
+    }
+
+    td[colspan="2"] { 
+    & ~ td:nth-child(even) { // if pad=2, odd=dark gray
+        background: $color__calendar-odd-days-bkg;
+        }
+    & ~ td:nth-child(odd) { // if pad=2, odd=light gray
+        background: $color__calendar-even-days-bkg;
+        }    
+    }
+
+    td[colspan="3"] ~ td:nth-child(even) {
+        background: $color__calendar-even-days-bkg;
+    }
+
+    td[colspan="4"] { 
+    & ~ td:nth-child(even) { // if pad=4, odd=dark gray
+        background: $color__calendar-odd-days-bkg;
+        }
+    & ~ td:nth-child(odd) { // if pad=4, odd=light gray
+        background: $color__calendar-even-days-bkg;
+        }    
+    }
+
+    td[colspan="5"] ~ td:nth-child(even) {
+        background: $color__calendar-even-days-bkg;
+    }
+
+    td[colspan="6"] { 
+    & ~ td:nth-child(even) { // if pad=2, odd=dark gray
+        background: $color__calendar-odd-days-bkg;
+        }
+    & ~ td:nth-child(odd) { // if pad=2, odd=light gray
+        background: $color__calendar-even-days-bkg;
+        }    
+    }
+}
+
+// checkerboard calendar
+//----------------------
+// tbody tr:nth-child(1) {
+//     td[colspan="1"] ~ td:nth-child(even) {
+//     background: #ccc;
+// }
+//     td[colspan="3"] ~ td:nth-child(even) {
+//     background: #ccc;
+// }
+//     td[colspan="5"] ~ td:nth-child(even) {
+//     background: #ccc;
+// }
+// td[colspan="3"] ~ td:nth-child(odd) {
+//     background: #fff;
+// }
+// }
+// tbody tr:nth-child(2) { 
+//     background: #fff;
+//     td:nth-child(odd) {
+//         background: #ccc;
+//     }
+// }
+// tbody tr:nth-child(3) { 
+//     background: #ccc;
+//     td:nth-child(odd) {
+//         background: #fff;
+//     }
+// }
+// tbody tr:nth-child(4) { 
+//     background: #fff;
+//     td:nth-child(odd) {
+//         background: #ccc;
+//     }
+// }
+// tbody tr:nth-child(5) { 
+//     background: #ccc;
+//     td:nth-child(odd) {
+//         background: #fff;
+//     }
+// }
+// tbody tr:nth-child(6) { 
+//     background: #fff;
+//     td:nth-child(odd) {
+//         background: #ccc;
+//     }
+// }
+//----------------------
+
+
+
+// target the first empty line before
+// day 1 of the month begins...
+// tbody tr > td.pad:first-child {
+//     background: #fff;
+// }
+
+// another, more efficient, way of writing it
+// so that it only targets empty cells no matter
+// where they show up on the calendar...
+tbody tr > td[class="pad"] {
+    background: $color__calendar-empty-day-pad-bkg;
+}
+
+// or if you wanted to separate the 2 empty
+// ends of the calendar...
+// tbody tr > td[class="pad"]:first-child {
+//     background: blue;
+// }
+// tbody tr > td[class="pad"]:last-child {
+//     background: red;
+// }
+
+#wp-calendar { // footer of calendar
+    background: $color__calendar-footer-bkg;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    caption { // Month: previous/next at bottom
+        padding: 6px 0px;
+        background: $color__calendar-footer-month-bkg;
+        color: $color__calendar-footer-month-txt;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+    }
+    a { // Dates that contain posts
+        color: $color__calendar-dates-that-contain-posts-link;
+    }
+}
+#wp-calendar tfoot {
+    td { // Month: previous/next at bottom of calendar
+    padding: 3px 0px;
+    }
+    a {
+        padding: 2px 8px;
+        border-radius: 3px;
+        background: $color__calendar-footer-month-bkg;
+        color: $color__calendar-footer-month-txt;
+        text-decoration: none;
+    &:hover {
+        color: $color__calendar-footer-month-txt-hover;
+        background: $color__calendar-footer-month-bkg-hover;
+        text-decoration: none;
+    }
+}
+}
+
 
 
 

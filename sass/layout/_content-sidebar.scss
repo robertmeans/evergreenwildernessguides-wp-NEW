@@ -1,25 +1,24 @@
 .site-content {
-    padding-bottom: 2em;
-    background: #b2b2b2 url(images/pattern.svg) repeat;
+    // padding-bottom: 2em;
+    background: #b2b2b2 url(_images/pattern.svg) repeat;
+    // background: #fff;
     width: 100%;
     max-width: 1232px;
     margin: 0 auto;
 }
+.single .site-content,
 .page .site-content {
-    padding-bottom: 2em;
-    // background: #b2b2b2 url(images/pattern.svg) repeat;
+    // padding-bottom: 2em;
     background: #fff;
 }
-.single .site-content { 
-    background: #fff; 
-    background: hsl(0, 0%, 100%);
+.page {
+	margin-bottom: 2em;
 }
-
 .site-content .widget-area {
 	width: 380px;
 	float: right;
 	padding: 2rem;
-	background: #fff;
+	background: #465d71;
 }
 
 .site-footer {
@@ -37,9 +36,7 @@
 .comments-area,
 .paging-navigation {
 	position: relative;
-	max-width: 580px;
-	max-width: 58rem;
-	padding: 0 4rem;
+	padding: 0.5em 1rem 0;
 	margin: 0 auto;
 }
 
@@ -55,8 +52,8 @@
 	.tag-links,
 	.post-navitation,
 	.comments-area,
-	.paging-navigation {
-		padding: 0 2rem;
+	.paging-navigation { // this causes h scroll bar if left at 2rem for left & right padding. changed it to 3rem. now h scroll appears at 345px in Chrome - ?!
+		padding: 0.5em 1rem 0;
 	}
 	.entry-content p,
 	.entry-content ul,
@@ -65,13 +62,20 @@
 	}
 }
 
+.search header.page-header {
+	margin-right: 0;
+}
+
+
+
+
+
 
 .post,
 .page-header {
-	// float: right;
-	// text-align: left;
 	margin-right: 0;
-	padding-top: 1em;
+	max-width: 780px;
+	// padding-top: 1em;
 	padding-bottom: 2em;
 	padding-left: 0;
 	padding-right: 0;
@@ -79,35 +83,68 @@
 	list-style-type: none;
 	background: #fff;
 }
+.search article.page {
+	max-width: 780px;
+	padding-top: 1em;
+	padding-bottom: 2em;
+	padding-left: 0;
+	padding-right: 0;
+	list-style-type: none;
+	background: #fff;
+
+	position: relative;
+	padding: 1rem;
+	margin: 0 0 1em 4.5em;
+}
+
 @media screen and (max-width: 1159px) {
 	.post,
-	.page-header {
+	.page-header,
+	.search header.page-header {
 		margin-right: auto;
+	}
+
+	.search article.page {
+		margin: 0 auto 1em auto;
 	}
 }
 
+
+
+
+
 .index-box {
 	position: relative;
-    max-width: 580px;
-    max-width: 58rem;
-    padding: 1em 0 2em;
-    margin: 0 auto 2em;
+    max-width: 780px;
+    padding: 1em 0 1em;
+    margin: 0 auto 1em;
     background: #fff;
-    background: hsl(0, 0%, 100%);
+    // background: hsl(0, 0%, 100%);
     // border-bottom: 1px solid #ccc;
+}
+.page-header {
+	padding: .2em 2em 1em 2em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.archive header.page-header h1.page-title,
+.search header.page-header h1.page-title,
+.search header.entry-header h1.entry-title,
+.error404 header.page-header h1.page-title,
+.error404 header.entry-header h1.entry-title {
+	font-size: 22px;
 }
 
 .index-box blockquote.alignleft,
 .index-box blockquote.alignright {
     background: #fff;
-    background: hsl(0, 0%, 100%);
     border: none;
 }
 .continue-reading {
     margin: 0;
     font-weight: 700;
-    font-size: 10px;
-    font-size: 1rem;
+    font-size: 14px;
+    // font-size: 1rem;
 }
 
 .continue-reading i { margin-left: .5em; }
@@ -145,4 +182,42 @@
 		float: none;
 		margin: 1em auto 0 auto;
 	}
+
+}
+
+.paging-navigation ul {
+    margin: 0;
+}
+
+.paging-navigation li { 
+	display: inline; 
+}
+
+a.page-numbers,
+span.page-numbers {
+	text-decoration: none;
+    padding: .25em .7em;
+    color: #333;
+    border: 1px solid #5e5e5e;
+    background: #fff;
+}
+
+a:hover.page-numbers {
+    color: #000;
+    text-decoration: none;
+    background: #313131;
+    color: #fff;
+}
+
+.paging-navigation .current {
+    font-weight: bold;
+    color: #000;
+    background: #ccc;
+}
+
+.paging-navigation {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+    list-style-type: none;
 }

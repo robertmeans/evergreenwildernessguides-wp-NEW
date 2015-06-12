@@ -1,10 +1,15 @@
 .site-footer {
 	padding: 2em;
 	font-family: 'Lato', sans-serif;
-	font-size: 10px;
-	font-size: 1rem;
-	color: #fff;
-	background: #313131;
+	font-size: 16px;
+	height: auto;
+	width: 100%;
+	max-width: 1232px;
+	display: block;
+	margin: 0 auto;
+	color: $color__footer-txt;
+	background: $color__footer-bkg;
+
 }
 .site-footer a {
 	color: #fff;

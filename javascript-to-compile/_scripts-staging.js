@@ -40,12 +40,12 @@ masonry-settings
  */
 
 jQuery(document).ready(function($){
-    var breakpoint = 930;
+    var breakpoint = 913; // breakpoint at 930 - 17px scroll bar?! this isn't right...
     var sf = $('ul.nav-menu');
 	
     if($(document).width() >= breakpoint){
         sf.superfish({
-            delay: 200,
+            delay: 500,
             speed: 'fast'
         });
     }

@@ -1,8 +1,74 @@
+.site-branding {
+    padding: 0;
+    text-align: center;
+    background: #2c86ba;
+    background: hsl(202, 62%, 45%);
+}
+.site-title {
+    display: inline;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 0.8em;
+    margin-bottom: 0px;
+    text-shadow: 2px 2px 4px #3e3e3e;
+}
+.site-description {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    line-height: .8em;
+    text-shadow: 2px 2px 4px #3e3e3e;
+}
+                    
+.title-box {
+    position: absolute;
+    z-index: 10000;
+    text-align: right;
+    width: 100%;
+    max-width: 1232px;
+    margin-bottom: -0.06em;
+    padding-bottom: 0;
+    padding-right: .5em;
+    bottom: 0;
+    right: 0;
+}
+                    
+.site-branding a { 
+    text-decoration: none; 
+}
+
+.site-title a,
+.site-description { 
+    color: #fff;
+    color: hsl(0, 0%, 100%);
+}
+                    
+/* Header responsive */
+@media screen and (max-width: 600px) {
+    .site-branding { 
+        padding: 0; 
+    }
+    .site-title {
+        font-size: 50px;
+    }
+    .site-description {
+        font-size: 20px;
+    }
+    .title-box {
+        max-width: 100%;
+        margin: 0;
+        border: none;
+    }
+}
+
 .header-image img {
     display: block;
     margin: 0 auto;
 }
-
 .header-background-image {
     background: no-repeat center;
     background-size: cover!important;
@@ -17,6 +83,14 @@
 // .flexslider {
 //     position: relative;
 // } 
+.flex-prev {
+    display: none;
+    right: 0;
+}
+.flex-next {
+    display: none;
+    left: 0;
+}
 #rapelling-logo {
     width: 100%;
     max-width: 1232px;

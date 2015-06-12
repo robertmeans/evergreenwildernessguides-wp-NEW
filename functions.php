@@ -125,7 +125,7 @@ function evergreenwildernessguides_scripts() {
 
 	wp_enqueue_style( 'evergreenwildernessguides-fontawesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
 
-	wp_enqueue_script( 'evergreenwildernessguides-superfish', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '20150519', true );
+	wp_enqueue_script( 'evergreenwildernessguides-superfish', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '20150611', true );
 
 	// wp_enqueue_script( 'evergreenwildernessguides-superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('evergreenwildernessguides-superfish'), '20150515', true);
 
